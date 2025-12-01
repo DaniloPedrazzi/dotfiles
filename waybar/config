@@ -1,0 +1,47 @@
+{
+    "position": "top",
+    "height": 35,
+    "output": ["DP-1"],
+
+    "modules-left": [
+        "custom/os_button"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "pulseaudio/slider",
+        "pulseaudio",
+        "tray",
+        "clock"
+    ],
+
+    "hyprland/workspaces": {
+        "icon-size": 32,
+        "spacing": 16
+    },
+    "custom/os_button": {
+        "format": "",
+        "tooltip": false
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 7
+    },
+    "clock": {
+        "format": " {:%H:%M} ",
+        "tooltip-format": "{:%d/%m/%Y}"
+    },
+    "pulseaudio/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal"
+    },
+    "pulseaudio": {
+        "format": "{volume}%",
+        "format-muted": "󰖁",
+        "scroll-step": 1,
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-right": "pavucontrol"
+    }
+}

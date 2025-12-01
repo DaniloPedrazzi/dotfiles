@@ -1,0 +1,17 @@
+*
+!*/
+!.gitignore
+
+!/alacritty/**
+
+!/fontconfig/**
+!/gtk-3.0/**
+!/gtk-4.0/**
+!/xsettingsd/**
+
+!/hypr/**
+!/oh-my-posh/**
+!/quickshell/**
+!/rofi/**
+!/wallpapers/**
+!/waybar/**
