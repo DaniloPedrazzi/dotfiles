@@ -1,0 +1,143 @@
+@define-color bg_main rgba(28, 28, 28, 1.0);
+@define-color bg_main_tooltip rgba(28, 28, 28, 0.75);
+@define-color bg_hover rgba(157, 121, 188, 0.08);
+@define-color text_main rgba(229, 229, 229, 1.0);
+@define-color text_inactive rgba(229, 229, 229, 0.15);
+@define-color warning_color rgba(230, 126, 34, 1.0);
+@define-color accent rgba(157, 121, 188, 1.0);
+
+* {
+  text-shadow: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 0px;
+}
+
+/* Waybar */
+window#waybar {
+  background: @bg_main;
+  color: @text_main;
+}
+
+/* Tooltips */
+tooltip {
+  background: @bg_main_tooltip;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: @text_inactive;
+}
+tooltip label {
+  color: @text_main;
+}
+
+/* Arch Logo */
+#custom-os_button {
+  font-size: 24px;
+  padding-left: 12px;
+  padding-right: 20px;
+  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  color: @accent;
+}
+
+/* Workspaces */
+#workspaces {
+  color: transparent;
+  margin-right: 1.5px;
+  margin-left: 1.5px;
+}
+#workspaces button {
+  padding: 3px;
+  color: @text_inactive;
+  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#workspaces button.active {
+  color: @accent;
+  border-bottom: 2px solid @accent;
+}
+#workspaces button.focused {
+  color: @accent;
+}
+#workspaces button.urgent {
+  background: rgba(255, 184, 108, 0.35);
+  border-bottom: 3px dashed @warning_color;
+  color: @warning_color;
+}
+#workspaces button:hover {
+  background: @bg_hover;
+  color: @text_main;
+}
+
+/* Tray */
+#tray {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#tray > .passive {
+  border-bottom: none;
+}
+#tray > widget {
+  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#tray > widget:hover {
+  background: @bg_hover;
+}
+
+/* Network */
+#network {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+/* Clock */
+#clock {
+  padding-right: 5px;
+  padding-left: 0px;
+  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#clock:hover {
+  background: @bg_hover;
+}
+
+/* Audio */
+#pulseaudio {
+  min-width: 36px;
+  padding-left: 3px;
+  padding-right: 10px;
+  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#pulseaudio:hover {
+  background: @bg_hover;
+}
+#volume-icon {
+  color: @accent;
+}
+
+/* Audio Slider */
+#pulseaudio-slider {
+  padding: 0;
+  margin: 0;
+}
+#pulseaudio-slider slider {
+  min-height: 0px;
+  min-width: 0px;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+}
+#pulseaudio-slider trough {
+  min-height: 5px;
+  min-width: 70px;
+  border-radius: 5px;
+  background: @bg_main_tooltip;
+}
+#pulseaudio-slider highlight {
+  min-width: 5px;
+  border-radius: 5px;
+  background: @accent;
+}
